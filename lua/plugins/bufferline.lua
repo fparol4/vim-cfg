@@ -12,18 +12,15 @@ return {
     show_buffer_close_icons = true,
     groups = {
       items = {
-        -- enable pinned group but give it no icon
-        groups.builtin.pinned:with({
-          icon = "󰐃",
-          name = "",
-        }),
+        groups.builtin.pinned,
       },
     },
     name_formatter = function(buf)
       if groups.builtin.pinned.matcher(buf) then
-        return ""
+        return buf.icon
+      else
+        return buf.name
       end
-      return buf.name
     end,
   },
 }

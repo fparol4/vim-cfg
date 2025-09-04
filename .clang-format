@@ -1,0 +1,29 @@
+BasedOnStyle: LLVM
+
+# Indentação
+IndentWidth: 2
+UseTab: Never
+TabWidth: 2
+
+# Limite de coluna
+ColumnLimit: 80
+
+# Estilo de chaves (Norminette exige na linha seguinte → Allman)
+BreakBeforeBraces: Allman
+
+# Espaços e parênteses
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+SpacesInAngles: false
+SpacesBeforeTrailingComments: 1
+
+# Estruturas curtas (não permitir tudo em uma linha)
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Outras regras úteis
+KeepEmptyLinesAtTheStartOfBlocks: false
+AlignOperands: false
+BreakBeforeBinaryOperators: None
+PointerAlignment: Left

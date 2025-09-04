@@ -12,14 +12,14 @@ return {
   },
   opts = function()
     local dap = require("dap")
+
     if not dap.adapters["pwa-node"] then
-      require("dap").adapters["pwa-node"] = {
+      dap.adapters["pwa-node"] = {
         type = "server",
         host = "localhost",
         port = "${port}",
         executable = {
           command = "node",
-          -- 💀 Make sure to update this path to point to your installation
           args = {
             LazyVim.get_pkg_path("js-debug-adapter", "/js-debug/src/dapDebugServer.js"),
             "${port}",
@@ -27,22 +27,22 @@ return {
         },
       }
     end
+
     if not dap.adapters["node"] then
       dap.adapters["node"] = function(cb, config)
         if config.type == "node" then
           config.type = "pwa-node"
         end
-        local nativeAdapter = dap.adapters["pwa-node"]
-        if type(nativeAdapter) == "function" then
-          nativeAdapter(cb, config)
+        local native = dap.adapters["pwa-node"]
+        if type(native) == "function" then
+          native(cb, config)
         else
-          cb(nativeAdapter)
+          cb(native)
         end
       end
     end
 
     local js_filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" }
-
     local vscode = require("dap.ext.vscode")
     vscode.type_to_filetypes["node"] = js_filetypes
     vscode.type_to_filetypes["pwa-node"] = js_filetypes
