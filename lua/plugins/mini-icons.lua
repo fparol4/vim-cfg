@@ -1,5 +1,7 @@
+vim.api.nvim_set_hl(0, "FolderLightBlue", { fg = "#1168E3" })
+
 return {
-  "echasnovski/mini.icons",
+  "nvim-mini/mini.icons",
   opts = {
     file = {
       [".eslintrc.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
@@ -10,7 +12,12 @@ return {
       ["package.json"] = { glyph = "", hl = "MiniIconsGreen" },
       ["tsconfig.json"] = { glyph = "", hl = "MiniIconsAzure" },
       ["tsconfig.build.json"] = { glyph = "", hl = "MiniIconsAzure" },
-      ["yarn.lock"] = { glyph = "", hl = "MiniIconsBlue" },
+    },
+    directory = {
+      ["src"] = { glyph = "", hl = "FolderLightBlue" },
+      ["lib"] = { glyph = "", hl = "FolderLightBlue" },
+      ["dist"] = { glyph = "", hl = "FolderLightBlue" },
+      ["node_modules"] = { glyph = "", hl = "FolderLightBlue" },
     },
   },
 }
