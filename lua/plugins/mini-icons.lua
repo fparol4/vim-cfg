@@ -18,6 +18,7 @@ return {
       ["lib"] = { glyph = "", hl = "FolderLightBlue" },
       ["dist"] = { glyph = "", hl = "FolderLightBlue" },
       ["node_modules"] = { glyph = "", hl = "FolderLightBlue" },
+      [".git"] = { glyph = "", hl = "FolderLightBlue" },
     },
   },
 }

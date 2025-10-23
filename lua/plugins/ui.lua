@@ -1,6 +1,6 @@
 return {
   -- "ellisonleao/gruvbox.nvim",
-  "rebelot/kanagawa.nvim",
+  -- "rebelot/kanagawa.nvim",
   -- "shaunsingh/nord.nvim",
   -- "jacoborus/tender.vim",
   -- "yorumicolors/yorumi.nvim",
@@ -13,7 +13,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_light_high_contrast",
+      colorscheme = "oh-lucy",
+      -- colorscheme = "github_light_high_contrast",
     },
   },
 }

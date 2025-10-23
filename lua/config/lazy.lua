@@ -21,7 +21,7 @@ require("lazy").setup({
     lazy = false,
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = { enabled = true },
+  checker = { enabled = false },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -34,3 +34,4 @@ require("lazy").setup({
     },
   },
 })
+
